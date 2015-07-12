@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_bg"
+    android:orientation="vertical"
+    android:paddingBottom="3dp"
+    android:paddingTop="3dp" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white_bg"
+        android:paddingBottom="6dp"
+        android:paddingLeft="6dp"
+        android:paddingRight="12dp"
+        android:paddingTop="6dp" >
+
+        <ImageView
+            android:id="@+id/item_limit_buy_food_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/time_limit_buy_food" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/item_limit_buy_food_iv"
+            android:text="@string/limit_buy_food_name"
+            android:textColor="@color/blue_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/item_buy_food_original_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/item_limit_buy_food_iv"
+            android:text="￥108"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/item_buy_food_present_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="4dp"
+            android:text="￥79"
+            android:textColor="@color/red_text"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/item_buy_food_buy_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="18dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/time_limit_buy_to_buy"
+            android:gravity="center"
+            android:text="@string/limit_buy_food_to_buy"
+            android:textColor="@color/white_text" />
+    </RelativeLayout>
+
+</LinearLayout>

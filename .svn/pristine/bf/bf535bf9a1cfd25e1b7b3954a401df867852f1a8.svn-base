@@ -1,0 +1,107 @@
+package com.hh.tennets.activity;
+
+import android.annotation.TargetApi;
+import android.app.FragmentTransaction;
+import android.os.Build;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.LinearLayout;
+
+import com.ab.view.ioc.AbIocView;
+import com.hh.tennets.BaseActivity;
+import com.hh.tennets.R;
+import com.hh.tennets.fragment.ChooseBuyFragment;
+import com.hh.tennets.fragment.HomePageFragment;
+import com.hh.tennets.fragment.PersonCenterFragment;
+import com.hh.tennets.fragment.ShoppingCartFragment;
+
+public class MainActivity extends BaseActivity implements OnClickListener {
+    @AbIocView(id = R.id.homepage_ll)
+    private LinearLayout homepageLayout;
+    @AbIocView(id = R.id.choosebuy_ll)
+    private LinearLayout choosebuyLayout;
+    @AbIocView(id = R.id.shoppingcart_ll)
+    private LinearLayout shoppingcartLayout;
+    @AbIocView(id = R.id.person_ll)
+    private LinearLayout personcenterLayout;
+    private HomePageFragment homePageFragment;
+    private ChooseBuyFragment chooseBuyFragment;
+    private ShoppingCartFragment shoppingCartFragment;
+    private PersonCenterFragment personCenterFragment;
+    private FragmentTransaction transaction;
+
+    @Override
+    public int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    public void initHolder() {
+        setSubPageTitle("奶酪时光", true);
+        initFragments();
+    }
+
+    @Override
+    public void initLayoutParams() {}
+
+    @Override
+    public void registerClickLister() {
+        homepageLayout.setOnClickListener(this);
+        choosebuyLayout.setOnClickListener(this);
+        shoppingcartLayout.setOnClickListener(this);
+        personcenterLayout.setOnClickListener(this);
+    }
+
+    @Override
+    public void initData() {}
+
+    private void initFragments() {
+        homePageFragment = new HomePageFragment();
+        chooseBuyFragment = new ChooseBuyFragment();
+        shoppingCartFragment = new ShoppingCartFragment();
+        personCenterFragment = new PersonCenterFragment();
+        showFragement(1);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.homepage_ll:
+                showFragement(1);
+                break;
+            case R.id.choosebuy_ll:
+                showFragement(2);
+                break;
+            case R.id.shoppingcart_ll:
+                showFragement(3);
+                break;
+            case R.id.person_ll:
+                showFragement(4);
+                break;
+            default:
+                showFragement(1);
+                break;
+        }
+    }
+
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    private void showFragement(int page) {
+        transaction = getFragmentManager().beginTransaction();
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+        switch (page) {
+            case 1:
+                transaction.replace(R.id.main_frame, homePageFragment);
+                break;
+            case 2:
+                transaction.replace(R.id.main_frame, chooseBuyFragment);
+                break;
+            case 3:
+                transaction.replace(R.id.main_frame, shoppingCartFragment);
+                break;
+            case 4:
+                transaction.replace(R.id.main_frame, personCenterFragment);
+                break;
+        }
+        transaction.commitAllowingStateLoss();
+    }
+}

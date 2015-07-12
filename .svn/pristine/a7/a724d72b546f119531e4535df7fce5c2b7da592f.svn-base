@@ -1,0 +1,28 @@
+package com.hh.tennets.activity.shoppingcart;
+
+import com.hh.tennets.BaseActivity;
+import com.hh.tennets.R;
+
+/**
+ * 订单状态
+ */
+public class SubmitOrderStateActivity extends BaseActivity {
+    private static final String TAG = "SubmitOrderStateActivity";
+
+    @Override
+    public int getLayoutId() {
+        return R.layout.activity_submit_order_state;
+    }
+
+    @Override
+    public void initHolder() {}
+
+    @Override
+    public void initLayoutParams() {}
+
+    @Override
+    public void registerClickLister() {}
+
+    @Override
+    public void initData() {}
+}

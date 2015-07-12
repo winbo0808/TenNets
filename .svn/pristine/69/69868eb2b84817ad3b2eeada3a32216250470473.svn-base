@@ -1,0 +1,65 @@
+package com.hh.tennets.activity.shoppingcart;
+
+import android.content.Intent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+
+import com.ab.view.ioc.AbIocView;
+import com.hh.tennets.BaseActivity;
+import com.hh.tennets.R;
+
+/**
+ * 订单状态
+ */
+public class SubmitOrderStateActivity extends BaseActivity implements OnClickListener {
+    private static final String TAG = "SubmitOrderStateActivity";
+    @AbIocView(id = R.id.complaint_phone_btn)
+    private Button complaint_phone_btn;
+    @AbIocView(id = R.id.complaint_leavemessage_btn)
+    private Button complaint_leavemessage_btn;
+    @AbIocView(id = R.id.submit_order_state_cancel_btn)
+    private Button submit_order_state_cancel_btn;
+
+    @Override
+    public int getLayoutId() {
+        return R.layout.activity_submit_order_state;
+    }
+
+    @Override
+    public void initHolder() {
+        setSubPageTitle("", true);
+    }
+
+    @Override
+    public void initLayoutParams() {}
+
+    @Override
+    public void registerClickLister() {
+        complaint_leavemessage_btn.setOnClickListener(this);
+        submit_order_state_cancel_btn.setOnClickListener(this);
+    }
+
+    @Override
+    public void initData() {}
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.complaint_leavemessage_btn:
+                Intent intentLeaveMessageComplaintActivity =
+                        new Intent(SubmitOrderStateActivity.this,
+                                LeaveMessageComplaintActivity.class);
+                startActivity(intentLeaveMessageComplaintActivity);
+                break;
+            case R.id.submit_order_state_cancel_btn:
+                Intent intentCancelOrderSuccessActivity =
+                        new Intent(SubmitOrderStateActivity.this, CancelOrderSuccessActivity.class);
+                startActivity(intentCancelOrderSuccessActivity);
+                break;
+
+            default:
+                break;
+        }
+    }
+}

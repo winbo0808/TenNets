@@ -1,0 +1,27 @@
+package com.hh.tennets.fragment;
+
+import android.view.View;
+
+import com.hh.tennets.BaseFragment;
+import com.hh.tennets.R;
+
+public class ShoppingCartFragment extends BaseFragment {
+    private static final String TAG = "ShoppingCartFragment";
+
+    @Override
+    public int getLayoutId() {
+        return R.layout.fragment_shoppingcart;
+    }
+
+
+    @Override
+    public void initData() {}
+
+
+    @Override
+    public void initHolder(View view) {}
+
+
+    @Override
+    public void bindLisrener() {}
+}

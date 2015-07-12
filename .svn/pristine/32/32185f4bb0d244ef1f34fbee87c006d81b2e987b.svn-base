@@ -1,0 +1,61 @@
+package com.hh.tennets.activity;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Fragment;
+
+import com.ab.view.ioc.AbIocView;
+import com.ab.view.sliding.AbBottomTabView;
+import com.hh.tennets.BaseActivity;
+import com.hh.tennets.R;
+import com.hh.tennets.fragment.ChooseBuyFragment;
+import com.hh.tennets.fragment.HomePageFragment;
+import com.hh.tennets.fragment.PersonCenterFragment;
+import com.hh.tennets.fragment.ShoppingCartFragment;
+
+public class MainActivity extends BaseActivity {
+    @AbIocView(id = R.id.mBottomTabView)
+    private AbBottomTabView mBottomTabView;
+
+    @Override
+    public int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    public void initHolder() {
+        setSubPageTitle("奶酪时光", true);
+        mBottomTabView.getViewPager().setOffscreenPageLimit(5);
+        initFragments();
+    }
+
+    @Override
+    public void initLayoutParams() {}
+
+    @Override
+    public void registerClickLister() {}
+
+    @Override
+    public void initData() {}
+
+    private void initFragments() {
+        HomePageFragment homePageFragment = new HomePageFragment();
+        ChooseBuyFragment chooseBuyFragment = new ChooseBuyFragment();
+        ShoppingCartFragment shoppingCartFragment = new ShoppingCartFragment();
+        PersonCenterFragment personCenterFragment = new PersonCenterFragment();
+
+        List<Fragment> mFragments = new ArrayList<Fragment>();
+        mFragments.add(homePageFragment);
+        mFragments.add(chooseBuyFragment);
+        mFragments.add(shoppingCartFragment);
+        mFragments.add(personCenterFragment);
+
+        List<String> tabTexts = new ArrayList<String>();
+        tabTexts.add("首页");
+        tabTexts.add("选购");
+        tabTexts.add("购物车");
+        tabTexts.add("个人信息");
+        mBottomTabView.addItemViews(tabTexts, mFragments);
+    }
+}

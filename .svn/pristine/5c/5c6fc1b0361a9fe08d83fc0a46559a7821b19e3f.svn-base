@@ -1,0 +1,48 @@
+package com.hh.tennets.activity;
+
+import android.view.View;
+import android.view.View.OnClickListener;
+
+import com.hh.tennets.BaseActivity;
+import com.hh.tennets.R;
+
+public class RegisterActivity extends BaseActivity implements OnClickListener {
+
+	@Override
+	public void onClick(View arg0) {
+		// TODO 自动生成的方法存根
+
+	}
+
+	@Override
+	public int getLayoutId() {
+		// TODO 自动生成的方法存根
+		return R.layout.activity_register;
+	}
+
+	@Override
+	public void initHolder() {
+		setSubPageTitle("注册", true);
+		// TODO 自动生成的方法存根
+
+	}
+
+	@Override
+	public void initLayoutParams() {
+		// TODO 自动生成的方法存根
+
+	}
+
+	@Override
+	public void registerClickLister() {
+		// TODO 自动生成的方法存根
+
+	}
+
+	@Override
+	public void initData() {
+		// TODO 自动生成的方法存根
+
+	}
+
+}

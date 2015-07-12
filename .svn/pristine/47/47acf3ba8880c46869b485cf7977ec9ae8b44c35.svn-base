@@ -1,0 +1,57 @@
+package com.hh.tennets.view;
+
+import com.hh.tennets.R;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+
+public class NumberPickerView extends LinearLayout implements OnClickListener {
+    private ImageView number_minus_iv;
+    private ImageView number_add_iv;
+    private EditText number_size_et;
+    private int number = 0;
+    private View view;
+
+    public NumberPickerView(Context context) {
+        super(context);
+        view = LayoutInflater.from(context).inflate(R.layout.number_picker_layout, null);
+        init(view);
+        addView(view);
+    }
+
+    private void init(View view) {
+        number_minus_iv = (ImageView) view.findViewById(R.id.number_minus_iv);
+        number_add_iv = (ImageView) view.findViewById(R.id.number_add_iv);
+        number_size_et = (EditText) view.findViewById(R.id.number_size_et);
+        number_minus_iv.setOnClickListener(this);
+        number_add_iv.setOnClickListener(this);
+    }
+
+    public int getNumber() {
+        number = Integer.parseInt(number_size_et.getText().toString().trim());
+        return number;
+    }
+
+    public View getView() {
+        return view;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.number_minus_iv:
+                number_size_et.setText("" + number--);
+                break;
+            case R.id.number_add_iv:
+                number_size_et.setText("" + number++);
+                break;
+            default:
+                break;
+        }
+    }
+}

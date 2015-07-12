@@ -1,0 +1,43 @@
+package com.hh.tennets.fragment;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+
+import com.hh.tennets.BaseFragment;
+
+public class PersonCentreFragment extends BaseFragment implements
+		OnClickListener {
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public View getLayourView(LayoutInflater inflater, ViewGroup container) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void initHolder(View view) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void initData() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void bindLisrener() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

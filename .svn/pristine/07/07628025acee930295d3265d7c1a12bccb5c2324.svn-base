@@ -1,0 +1,42 @@
+package com.hh.tennets.fragment;
+
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import com.hh.tennets.BaseFragment;
+import com.hh.tennets.R;
+import com.hh.tennets.activity.shoppingcart.SubmitOrderStateActivity;
+
+@SuppressLint("NewApi")
+public class ShoppingCartFragment extends BaseFragment {
+    private static final String TAG = "ShoppingCartFragment";
+    private Button fragment_submit_order_btn;
+
+    @Override
+    public int getLayoutId() {
+        return R.layout.fragment_shoppingcart;
+    }
+
+    @Override
+    public void initData() {// 显示内容
+        showContentView();
+    }
+
+    @Override
+    public void initHolder(View view) {
+        fragment_submit_order_btn = (Button) view.findViewById(R.id.fragment_submit_order_btn);
+        fragment_submit_order_btn.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), SubmitOrderStateActivity.class);
+                getActivity().startActivity(intent);
+            }
+        });
+    }
+
+    @Override
+    public void bindListener() {}
+}

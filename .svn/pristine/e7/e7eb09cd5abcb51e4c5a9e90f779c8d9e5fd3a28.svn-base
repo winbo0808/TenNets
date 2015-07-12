@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_activity_title" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_bg"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp" >
+
+        <TextView
+            android:id="@+id/limit_buy_seconds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/time_limit_buy_time"
+            android:gravity="center"
+            android:text="47" />
+
+        <TextView
+            android:id="@+id/limit_buy_colons_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_toLeftOf="@id/limit_buy_seconds"
+            android:text=":" />
+
+        <TextView
+            android:id="@+id/limit_buy_minutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/limit_buy_colons_first"
+            android:background="@drawable/time_limit_buy_time"
+            android:gravity="center"
+            android:text="30" />
+
+        <TextView
+            android:id="@+id/limit_buy_seconds_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_toLeftOf="@id/limit_buy_minutes"
+            android:text=":" />
+
+        <TextView
+            android:id="@+id/limit_buy_hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/limit_buy_seconds_second"
+            android:background="@drawable/time_limit_buy_time"
+            android:gravity="center"
+            android:text="01" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@id/limit_buy_hours"
+            android:text="@string/limit_buy_surplus_time" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/limit_buy_lv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null" />
+
+</LinearLayout>

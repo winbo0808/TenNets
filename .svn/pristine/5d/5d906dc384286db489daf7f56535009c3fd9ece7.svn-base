@@ -1,0 +1,28 @@
+package com.hh.tennets.activity.person.myshop;
+
+import android.view.View;
+
+import com.hh.tennets.BaseFragment;
+import com.hh.tennets.R;
+
+public class MyShopsNewsFragment extends BaseFragment {
+
+	@Override
+	public int getLayoutId() {
+		return R.layout.fragment_shops_news;
+	}
+
+	@Override
+	public void initData() {// 显示内容
+		showContentView();
+	}
+
+	@Override
+	public void initHolder(View view) {
+		setSubPageTitle("订单", true);
+	}
+
+	@Override
+	public void bindListener() {
+	}
+}

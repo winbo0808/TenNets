@@ -1,0 +1,30 @@
+package com.hh.tennets.activity.shoppingcart;
+
+import com.hh.tennets.BaseActivity;
+import com.hh.tennets.R;
+
+/**
+ * 留言投诉
+ */
+public class LeaveMessageComplaintActivity extends BaseActivity {
+    private static final String TAG = "LeaveMessageComplaint";
+
+    @Override
+    public int getLayoutId() {
+        return R.layout.activity_leave_message_complaint;
+    }
+
+    @Override
+    public void initHolder() {
+        setSubPageTitle("投诉反馈", true);
+    }
+
+    @Override
+    public void initLayoutParams() {}
+
+    @Override
+    public void registerClickLister() {}
+
+    @Override
+    public void initData() {}
+}

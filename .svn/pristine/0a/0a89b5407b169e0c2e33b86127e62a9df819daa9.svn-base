@@ -1,0 +1,38 @@
+package com.hh.tennets.activity.person.myorder;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ListView;
+
+import com.ab.fragment.AbFragment;
+import com.hh.tennets.R;
+
+public class MyOrdersItemFragmentLoad extends AbFragment {
+
+	private Activity mActivity = null;
+
+	@Override
+	public View onCreateContentView(LayoutInflater inflater,
+			ViewGroup container, Bundle savedInstanceState) {
+
+		mActivity = this.getActivity();
+		View view = inflater.inflate(R.layout.fragment_my_orders_item, null);
+		return view;
+	}
+
+	@Override
+	public void setResource() {
+		// 设置加载的资源
+		// this.setLoadDrawable(R.drawable.ic_load);
+		this.setLoadMessage("正在查询,请稍候");
+
+		// this.setRefreshDrawable(R.drawable.ic_refresh);
+		this.setRefreshMessage("请求出错，请重试");
+	}
+}

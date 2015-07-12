@@ -1,0 +1,63 @@
+package com.hh.tennets.fragment;
+
+import android.content.Intent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.webkit.WebView.FindListener;
+import android.widget.Button;
+import android.widget.LinearLayout;
+
+import com.ab.view.ioc.AbIocView;
+import com.hh.tennets.BaseFragment;
+import com.hh.tennets.R;
+import com.hh.tennets.activity.person.myorder.MyOrdersActivity;
+import com.hh.tennets.activity.person.myrelease.MyReleaseActivity;
+
+public class PersonCenterFragment extends BaseFragment implements
+		OnClickListener {
+	private LinearLayout layout_my_order;
+
+	private LinearLayout layout_my_shop;
+
+	private LinearLayout layout_my_release;
+
+	@Override
+	public void onClick(View v) {
+		if (v == layout_my_order) {
+			Intent intent = new Intent(mContext, MyOrdersActivity.class);
+			mContext.startActivity(intent);
+		} else if (v == layout_my_shop) {
+			// Intent intent = new Intent(mContext, MyOrdersActivity.class);
+			// mContext.startActivity(intent);
+		} else if (v == layout_my_release) {
+			Intent intent = new Intent(mContext, MyReleaseActivity.class);
+			mContext.startActivity(intent);
+		}
+	}
+
+	@Override
+	public int getLayoutId() {
+		return R.layout.fragment_personcenter;
+	}
+
+	@Override
+	public void initHolder(View view) {
+		setSubPageTitle("个人中心", false);
+		layout_my_order = (LinearLayout) view
+				.findViewById(R.id.layout_my_order);
+		layout_my_shop = (LinearLayout) view.findViewById(R.id.layout_my_shop);
+		layout_my_release = (LinearLayout) view
+				.findViewById(R.id.layout_my_release);
+	}
+
+	@Override
+	public void initData() {
+	}
+
+	@Override
+	public void bindListener() {
+		layout_my_order.setOnClickListener(this);
+		layout_my_shop.setOnClickListener(this);
+		layout_my_release.setOnClickListener(this);
+	}
+}

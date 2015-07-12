@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hh.tennets"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="com.hh.tennets.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.hh.tennets.activity.LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.hh.tennets.activity.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hh.tennets.activity.TextActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 注册 -->
+
+        <activity
+            android:name="com.hh.tennets.activity.RegisterActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 店铺收藏 -->
+
+        <activity
+            android:name="com.hh.tennets.activity.person.ShopCollectedActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 我的订单 -->
+
+        <activity
+            android:name="com.hh.tennets.activity.person.myorder.MyOrdersActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 订单详情 -->
+
+        <activity
+            android:name="com.hh.tennets.activity.person.myorder.MyOrderDetailsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 我的发布 -->
+
+        <activity
+            android:name="com.hh.tennets.activity.person.myrelease.MyReleaseActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 我的店铺 -->
+
+        <activity
+            android:name="com.hh.tennets.activity.person.myshop.MyShopsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 我的优惠券 -->
+
+        <activity
+            android:name="com.hh.tennets.activity.person.MyCouponsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 发布二手信息详情 -->
+
+        <activity
+            android:name="com.hh.tennets.activity.person.myrelease.MyReleaseSecondHandShopsDetailsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 发布招聘信息详情 -->
+
+        <activity
+            android:name="com.hh.tennets.activity.person.myrelease.MyReleaseHiringDetailsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 忘记密码 -->
+
+        <activity
+            android:name="com.hh.tennets.activity.ForgetPwdActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 投诉反馈 -->
+        <activity
+            android:name="com.hh.tennets.activity.shoppingcart.LeaveMessageComplaintActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 投诉成功 -->
+        <activity
+            android:name="com.hh.tennets.activity.shoppingcart.ComplaintSuccessActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 取消订单成功 -->
+        <activity
+            android:name="com.hh.tennets.activity.shoppingcart.CancelOrderSuccessActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 提交订单 -->
+        <activity
+            android:name="com.hh.tennets.activity.shoppingcart.SubmitOrderActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 提交订单成功(订单状态) -->
+        <activity
+            android:name="com.hh.tennets.activity.shoppingcart.SubmitOrderStateActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+       
+    </application>
+
+</manifest>

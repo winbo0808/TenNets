@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_bg"
+    android:orientation="vertical"
+    android:paddingBottom="4dp"
+    android:paddingTop="4dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white_bg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp"
+            android:text="@string/shop_recommend_food_name"
+            android:textColor="@color/blue_text"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/item_shop_recommend_iv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shop_recommend_food" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/shop_recommend_text_description"
+            android:textColor="@color/grey_text" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@color/grey_bg" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp" >
+
+            <TextView
+                android:id="@+id/item_shop_recommend_present_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="79元"
+                android:textColor="@color/red_text"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/item_shop_recommend_original_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/item_shop_recommend_present_price"
+                android:text="100元"
+                android:textColor="@color/grey_text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/time_limit_buy_to_buy"
+                android:gravity="center"
+                android:text="@string/shop_recommend_buy_now" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

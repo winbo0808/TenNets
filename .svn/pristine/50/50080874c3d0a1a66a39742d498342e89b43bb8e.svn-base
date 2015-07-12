@@ -1,0 +1,37 @@
+package com.hh.tennets.fragment;
+
+import android.annotation.SuppressLint;
+import android.view.View;
+import com.hh.tennets.BaseFragment;
+import com.hh.tennets.R;
+import com.hh.tennets.adapter.HomePageCommentListAdapter;
+import com.hh.tennets.view.MyListView;
+
+public class HomePageFragment extends BaseFragment {
+    private static final String TAG = "HomePageFragment";
+    private MyListView commentListView;
+    private HomePageCommentListAdapter adapter;
+
+    @Override
+    public int getLayoutId() {
+        return R.layout.fragment_homepage;
+    }
+
+    @SuppressLint("NewApi")
+    @Override
+    public void initData() {// 显示内容
+        showContentView();
+        adapter = new HomePageCommentListAdapter(getActivity(), null);
+        commentListView.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void initHolder(View view) {
+        setSubPageTitle("奶酪时光", false);
+        commentListView = (MyListView) view.findViewById(R.id.fragment_home_comment_lv);
+    }
+
+    @Override
+    public void bindListener() {}
+}

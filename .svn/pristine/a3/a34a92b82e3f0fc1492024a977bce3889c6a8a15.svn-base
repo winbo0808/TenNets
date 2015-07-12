@@ -1,0 +1,36 @@
+package com.hh.tennets.fragment;
+
+import android.annotation.SuppressLint;
+import android.view.View;
+import android.widget.ListView;
+import com.hh.tennets.BaseFragment;
+import com.hh.tennets.R;
+import com.hh.tennets.adapter.FragmentChooseBuyListAdapter;
+
+public class ChooseBuyFragment extends BaseFragment {
+    private static final String TAG = "ChooseButFragment";
+    private ListView fragment_choosebuy_lv;
+
+    @Override
+    public int getLayoutId() {
+        return R.layout.fragment_choosebuy;
+    }
+
+    @SuppressLint("NewApi")
+    @Override
+    public void initData() {// 显示内容
+        showContentView();
+        FragmentChooseBuyListAdapter adapter =
+                new FragmentChooseBuyListAdapter(getActivity(), null);
+        fragment_choosebuy_lv.setAdapter(adapter);
+    }
+
+    @Override
+    public void initHolder(View view) {
+        setSubPageTitle("奶酪时光", false);
+        fragment_choosebuy_lv = (ListView) view.findViewById(R.id.fragment_choosebuy_lv);
+    }
+
+    @Override
+    public void bindListener() {}
+}

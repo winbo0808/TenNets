@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <color name="white_bg">#ffffff</color>
+    <color name="white_text">#ffffff</color>
+    <color name="title_blue_bg">#31b5d7</color>
+    <color name="grey_text">#6a6969</color>
+    <color name="blue_line">#31b5d7</color>
+    <color name="black_text">#111111</color>
+    <color name="register_bg">#A5CEDA</color>
+    <color name="text_hint">#6a6969</color>
+    <color name="dark_grey_text">#7d8080</color>
+    <color name="gray_bg">#f4f4f4</color>
+    <color name="gray_line">#c3c3c3</color>
+    <color name="blue_text">#31b5d7</color>
+    <color name="dark_gray_bg">#e5e5e5</color>
+    <color name="red_text">#fb0503</color>
+    <color name="details_red_text">#ef3658</color>
+    <color name="orange_bg">#f19249</color>
+    <color name="green_bg">#7fc369</color>
+    <color name="purple_bg">#ea6a76</color>
+    <color name="grey_bg">#f4f4f4</color>
+    <color name="complaint_red">#FF0000</color>
+    <color name="choose_buy_notice">#87CEFF</color>
+    <color name="choose_buy_all_foods">#40E0D0</color>
+    <color name="submit_order_cancel">#FFA500</color>
+    <color name="home_page_yellow">#EE9A00</color>
+    <color name="home_page_green">#9ACD32</color>
+    <color name="home_page_red">#EE6A50</color>
+    <color name="shopping_cart_gray_bg">#CDCDC1</color>
+
+    <drawable name="gray_bg">#f4f4f4</drawable>
+    <drawable name="white_bg">#ffffff</drawable>
+    <drawable name="dark_gray_bg">#c3c3c3</drawable>
+
+</resources>

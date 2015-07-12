@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/common_item_white_bg_selector"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/iv_news_item_content1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/icon_default_picture" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_news_item_content2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:text="咨询标题"
+            android:textColor="@color/dark_grey_text"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_news_item_content3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="咨询简介"
+            android:textColor="@color/dark_grey_text"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+</LinearLayout>

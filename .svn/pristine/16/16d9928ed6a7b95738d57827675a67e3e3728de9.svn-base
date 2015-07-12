@@ -1,0 +1,91 @@
+package com.hh.tennets;
+
+import com.ab.util.AbDialogUtil;
+import com.ab.util.AbToastUtil;
+
+import android.annotation.SuppressLint;
+import android.app.Fragment;
+import android.content.Context;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+@SuppressLint("NewApi")
+public abstract class BaseFragment extends Fragment {
+    public Context mContext;
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(getLayoutId(), null);
+        mContext = getActivity();
+        initHolder(view);
+        initData();
+        bindListener();
+        return view;
+    }
+
+    /**
+     * 初始化布局
+     */
+    public abstract int getLayoutId();
+
+    public abstract void initHolder(final View view);
+
+    public abstract void initData();
+
+    public abstract void bindListener();
+
+    /**
+     * toast提示文本
+     */
+    public void showToast(Context context, String text) {
+        if (null != context) {
+            AbToastUtil.showToast(context, text);
+        }
+    }
+
+    public void showToast(Context context, int resId) {
+        if (null != context) {
+            AbToastUtil.showToast(context, resId);
+        }
+    }
+
+    /**
+     * 在线程中提示文本信息
+     */
+    public void showToastInThread(Context context, String text) {
+        if (null != context) {
+            AbToastUtil.showToastInThread(context, text);
+        }
+    }
+
+    public void showToastInThread(Context context, int resId) {
+        if (null != context) {
+            AbToastUtil.showToastInThread(context, resId);
+        }
+    }
+
+    /**
+     * 显示网络稍后进度框
+     */
+    public void showProgressDialog(Context context) {
+        if (null != context) {
+            AbDialogUtil.showProgressDialog(context, 0,
+                    getResources().getResourceName(R.string.progress_dialog));
+        }
+    }
+
+    /**
+     * 描述：显示进度框.
+     * 
+     * @param context the context
+     * @param indeterminateDrawable 用默认请写0
+     * @param message the message
+     */
+    public void showProgressDialog(Context context, int indeterminateDrawable, String message) {
+        if (null != context) {
+            AbDialogUtil.showProgressDialog(context, indeterminateDrawable, message);
+        }
+    }
+}

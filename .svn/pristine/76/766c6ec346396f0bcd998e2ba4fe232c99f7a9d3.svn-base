@@ -1,0 +1,28 @@
+package com.hh.tennets.fragment;
+
+import android.view.View;
+
+import com.hh.tennets.BaseFragment;
+import com.hh.tennets.R;
+
+public class ChooseBuyFragment extends BaseFragment {
+	private static final String TAG = "ChooseButFragment";
+
+	@Override
+	public int getLayoutId() {
+		return R.layout.fragment_choosebuy;
+	}
+
+	@Override
+	public void initData() {// 显示内容
+	 showContentView();
+	}
+
+	@Override
+	public void initHolder(View view) {
+	}
+
+	@Override
+	public void bindListener() {
+	}
+}

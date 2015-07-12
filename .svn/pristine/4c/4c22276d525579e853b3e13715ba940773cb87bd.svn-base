@@ -1,0 +1,33 @@
+package com.hh.tennets.fragment;
+
+import android.view.View;
+import android.view.View.OnClickListener;
+
+import com.hh.tennets.BaseFragment;
+import com.hh.tennets.R;
+
+public class PersonCenterFragment extends BaseFragment implements
+		OnClickListener {
+
+	@Override
+	public void onClick(View v) {
+	}
+
+	@Override
+	public int getLayoutId() {
+		return R.layout.fragment_personcenter;
+	}
+
+	@Override
+	public void initHolder(View view) {
+		setSubPageTitle("个人中心", false);
+	}
+
+	@Override
+	public void initData() {
+	}
+
+	@Override
+	public void bindListener() {
+	}
+}

@@ -1,0 +1,28 @@
+package com.hh.tennets.fragment;
+
+import android.view.View;
+
+import com.hh.tennets.BaseFragment;
+import com.hh.tennets.R;
+
+public class HomePageFragment extends BaseFragment {
+    private static final String TAG = "HomePageFragment";
+
+    @Override
+    public int getLayoutId() {
+        return R.layout.fragment_homepage;
+    }
+
+    @Override
+    public void initData() {// 显示内容
+        showContentView();
+    }
+
+    @Override
+    public void initHolder(View view) {
+        setSubPageTitle("奶酪时光", false);
+    }
+
+    @Override
+    public void bindListener() {}
+}

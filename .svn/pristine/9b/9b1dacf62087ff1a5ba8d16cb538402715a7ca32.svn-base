@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">十里网</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- baseactivity -->
+    <string name="progress_dialog">请稍后</string>
+
+    <!-- 留言投诉 -->
+    <string name="leavemessage_shop">投诉店铺：</string>
+    <string name="leavemessage_reason">投诉原因：</string>
+    <string name="leavemessage_timeout">商家物流派送严重超时了</string>
+    <string name="leavemessage_no_delivery">商家未派送就确认订单了，且沟通无效</string>
+    <string name="leavemessage_delivery_notall">商家只派送部分商品并未补发，且沟通无效</string>
+    <string name="leavemessage_apologize">商家对我人格进行侮辱，并未道歉</string>
+    <string name="leavemessage_other_reason">其他原因</string>
+    <string name="leavemessage_message">具体详情：</string>
+    <string name="leavemessage_add_picture">附加照片：</string>
+    <string name="leavemessage_max_picture">（最多三张，非必填）</string>
+    <string name="leavemessage_makesure">确认投诉</string>
+
+    <!-- ComplaintSuccessActivity -->
+    <string name="complaint_success">投诉成功</string>
+    <string name="complaint_success_title">温馨提示：</string>
+    <string name="complaint_success_first">尊敬的用户，您好！感谢您对十里网的支持，我们将会尽快对您的投诉进行处理，请您保持手机畅通，以便我们及时与您进行沟通核实。</string>
+    <string name="complaint_success_second">如若投诉真实，我们将会对商家进行一定的处理并向您弥补必要的损失。如若商家侵权涉及到法律责任，我们将依法为您维权，同时商家也会承担相应的法律责任。</string>
+    <string name="complaint_success_third">给您带来的不便，请您理解！</string>
+    <!-- CancelOrderSuccessActivity -->
+    <string name="cancel_order_success">取消订单成功</string>
+    <string name="cancel_order_success_message">尊敬的用户，您好！感谢您对我们的支持。订单取消后24小时内，退款将会自动打入您的账号，请注意查收。给您带来的不变，希望您能够理解，谢谢！</string>
+
+    <!-- SubmitOrderActivity -->
+    <string name="submit_order_full">满起送价！</string>
+    <string name="submit_order_type">订单类型：</string>
+    <string name="submit_order_delivery">外送下单</string>
+    <string name="submit_order_shop">店内消费</string>
+    <string name="submit_order_pay_type">支付方式：</string>
+    <string name="submit_order_alipay">支付宝</string>
+    <string name="submit_order_online_bank">网银支付</string>
+    <string name="submit_order_cash_on_delivery">货到付款</string>
+    <string name="submit_order_is_use_coupons">是否使用优惠券抵费：</string>
+    <string name="submit_order_customer_name">顾客姓名：</string>
+    <string name="submit_order_address">配送地址：</string>
+    <string name="submit_order_customer_phone">手机号码：</string>
+    <string name="submit_order_remark">订单备注：</string>
+    <string name="submit_order_notices">公告：请预约您方便的收获时间</string>
+    <string name="submit_order_btn">提交订单</string>
+    <string name="submit_order_input_name">请填写您的姓名（必填）</string>
+    <string name="submit_order_input_address">请填写您的地址（必填）</string>
+    <string name="submit_order_input_phone">请填写您的手机号码（必填）</string>
+    <string name="submit_order_input_remark">请填写您的备注信息（非必填）</string>
+    <!-- SubmitOrderStateActivity -->
+    <string name="submit_order_success">提交成功</string>
+    <string name="submit_order_details">订单详情</string>
+    <string name="submit_order_not_recognized">订单未确认</string>
+    <string name="submit_order_recognized">订单已确认</string>
+    <string name="submit_order_already_delivery">订单已派送</string>
+    <string name="submit_order_complete">订单已完成</string>
+    <string name="submit_order_do_after_sure">确认完成并开始评论</string>
+    <string name="submit_order_cancel_order">取消订单</string>
+    <string name="submit_order_complaint_shoppkeeper">投诉店主：</string>
+    <string name="submit_order_telephone_complaints">电话投诉</string>
+    <string name="submit_order_leavemessage_complaints">留言投诉</string>
+    <string name="submit_order_reminder">温馨提示：</string>
+    <string name="submit_order_reminder_message">温馨提示：尊敬的顾客，您好！如果订单未得到及时处理，请先联系店主；在交易过程中如果您的合法权益遭到非法侵害，请及时投诉店主，我们将会切实维护您的权益！订单一经确认，将无法申请退款；订单已完成七个工作日后，顾客未确认订单且未投诉店主，即默认顾客已收货，并将把订单资金打入店铺账户。</string>
+    <string name="submit_order_more">再转转呗~</string>
+    <!-- SelectToBuyActivity -->
+    <string name="select_buy_notice">公告：</string>
+    <string name="select_buy_all_goods">全部商品</string>
+    <string name="select_buy_staple_food">主食</string>
+    <string name="select_buy_snack">小食</string>
+    <string name="select_buy_dessert">甜点</string>
+    <string name="select_buy_soup">汤羹</string>
+    <string name="select_buy_wine">酒水</string>
+    <string name="add_to_shopping_cart">加入购物车</string>
+
+    <!-- FragmentChooseBuyListAdapter -->
+    <string name="choose_buy_adapter_name">五香牛肉粒披萨</string>
+    <string name="choose_buy_adapter_sell">月销10份</string>
+    <string name="choose_buy_adapter_stock">库存8份</string>
+    <!-- HomePageFragment -->
+    <string name="home_page_notice">店铺公告</string>
+    <string name="home_page_notice_message">谁动了你的奶酪时光？仅售108元！价值261元的双人套餐，提供免费wifi。</string>
+    <string name="home_page_shop_message">店铺信息</string>
+    <string name="home_page_shop_name">店铺名称：</string>
+    <string name="home_page_shop_online_time">营业时间：</string>
+    <string name="home_page_shop_address">店铺地址：</string>
+    <string name="home_page_shop_phone">店主电话：</string>
+    <string name="home_page_shop_send_price">起送价格：</string>
+    <string name="home_page_shop_send_distance">服务范围：</string>
+    <string name="home_page_shop_send_money">保证金额：</string>
+    <string name="home_page_shop_complant_shop_keeper">投诉店主：</string>
+    <string name="home_page_shop_reminder">温馨提示：</string>
+    <string name="home_page_shop_reminder_message">遇到订单问题，请先及时联系店主，如若解决无效，立即拨打投诉电话。</string>
+    <string name="home_page_shop_comment">顾客评论</string>
+
+    <!-- limit_buy -->
+    <string name="limit_buy_surplus_time">活动结束倒计时</string>
+    <string name="limit_buy_food_name">商品名称</string>
+    <string name="limit_buy_food_to_buy">前往购买</string>
+    <!-- shop recommend -->
+    <string name="shop_recommend_food_name">商品名字</string>
+    <string name="shop_recommend_text_description">文字描述</string>
+    <string name="shop_recommend_buy_now">立即购买</string>
+    
+    <string name="price">价格：</string>
+    <string name="Introduction">介绍：</string>
+    <string name="add_picture">添加照片：</string>
+
+</resources>

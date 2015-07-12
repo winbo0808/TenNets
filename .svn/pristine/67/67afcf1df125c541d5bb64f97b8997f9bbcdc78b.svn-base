@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">十里网</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- baseactivity -->
+    <string name="progress_dialog">请稍后</string>
+
+    <!-- 留言投诉 -->
+    <string name="leavemessage_shop">投诉店铺：</string>
+    <string name="leavemessage_reason">投诉原因：</string>
+    <string name="leavemessage_timeout">商家物流派送严重超时了</string>
+    <string name="leavemessage_no_delivery">商家未派送就确认订单了，且沟通无效</string>
+    <string name="leavemessage_delivery_notall">商家只派送部分商品并未补发，且沟通无效</string>
+    <string name="leavemessage_apologize">商家对我人格进行侮辱，并未道歉</string>
+    <string name="leavemessage_other_reason">其他原因</string>
+    <string name="leavemessage_message">具体详情：</string>
+    <string name="leavemessage_max_picture">（最多三张，非必填）</string>
+    <string name="leavemessage_makesure">确认投诉</string>
+    
+    
+    <string name="add_picture">添加照片：</string>
+
+</resources>

@@ -1,0 +1,143 @@
+package com.hh.tennets.activity.person.myshop;
+
+import java.util.List;
+
+import android.annotation.SuppressLint;
+import android.app.FragmentTransaction;
+import android.graphics.drawable.Drawable;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import com.ab.view.ioc.AbIocView;
+import com.ab.view.sliding.AbBottomTabView;
+import com.hh.tennets.BaseActivity;
+import com.hh.tennets.R;
+
+public class MyShopQueryOrderActivity extends BaseActivity implements OnClickListener {
+
+	@AbIocView(id = R.id.layout_shop_tab)
+	private LinearLayout layout_shop_tab;
+	@AbIocView(id = R.id.iv_shop_tab)
+	private ImageView iv_shop_tab;
+
+	@AbIocView(id = R.id.tv_shop_tab)
+	private TextView tv_shop_tab;
+
+	@AbIocView(id = R.id.layout_shop_order_tab)
+	private LinearLayout layout_shop_order_tab;
+
+	@AbIocView(id = R.id.iv_shop_order_tab)
+	private ImageView iv_shop_order_tab;
+
+	@AbIocView(id = R.id.tv_shop_orders_unread_num)
+	private TextView tv_shop_orders_unread_num;
+
+	@AbIocView(id = R.id.tv_shop_order_tab)
+	private TextView tv_shop_order_tab;
+
+	@AbIocView(id = R.id.layout_shop_news_tab)
+	private LinearLayout layout_shop_news_tab;
+
+	@AbIocView(id = R.id.iv_shop_news_tab)
+	private ImageView iv_shop_news_tab;
+
+	@AbIocView(id = R.id.tv_shop_news_unread_num)
+	private TextView tv_shop_news_unread_num;
+
+	@AbIocView(id = R.id.tv_shop_news_tab)
+	private TextView tv_shop_news_tab;
+	private FragmentTransaction transaction;
+	private MyShopsFragment fragment1;
+	private MyShopsOrdersFragment fragment2;
+	private MyShopsNewsFragment fragment3;
+
+	@Override
+	public void onClick(View v) {
+		// TODO 自动生成的方法存根
+		if (v == layout_shop_tab) {
+			showFragement(1);
+		} else if (v == layout_shop_order_tab) {
+			showFragement(2);
+		} else if (v == layout_shop_news_tab) {
+			showFragement(3);
+		}
+	}
+
+	@Override
+	public int getLayoutId() {
+		// TODO Auto-generated method stub
+		return R.layout.activity_my_shop_query_order;
+	}
+
+	@Override
+	public void initHolder() {
+		// TODO Auto-generated method stub
+	}
+
+	@Override
+	public void initLayoutParams() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void registerClickLister() {
+		// TODO Auto-generated method stub
+		layout_shop_tab.setOnClickListener(this);
+		layout_shop_order_tab.setOnClickListener(this);
+		layout_shop_news_tab.setOnClickListener(this);
+	}
+
+	@Override
+	public void initData() {
+		// TODO Auto-generated method stub
+		fragment1 = new MyShopsFragment();
+		fragment2 = new MyShopsOrdersFragment();
+		fragment3 = new MyShopsNewsFragment();
+		showFragement(1);
+	}
+
+	@SuppressLint("NewApi")
+	private void showFragement(int page) {
+		transaction = getFragmentManager().beginTransaction();
+		transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+		tv_shop_tab.setTextColor(getResources()
+				.getColor(R.color.dark_grey_text));
+		tv_shop_order_tab.setTextColor(getResources().getColor(
+				R.color.dark_grey_text));
+		tv_shop_news_tab.setTextColor(getResources().getColor(
+				R.color.dark_grey_text));
+		iv_shop_tab.setImageResource(R.drawable.icon_my_shop);
+		iv_shop_order_tab.setImageResource(R.drawable.icon_shop_order_select);
+		iv_shop_news_tab.setImageResource(R.drawable.icon_shop_news);
+		switch (page) {
+		case 1:
+			tv_shop_tab
+					.setTextColor(getResources().getColor(R.color.blue_text));
+			iv_shop_tab.setImageResource(R.drawable.icon_my_shop_select);
+			transaction.replace(R.id.frame_my_shops, fragment1);
+			break;
+		case 2:
+			tv_shop_order_tab.setTextColor(getResources().getColor(
+					R.color.blue_text));
+			iv_shop_order_tab
+					.setImageResource(R.drawable.icon_shop_order_select);
+			transaction.replace(R.id.frame_my_shops, fragment2);
+			// 替换结算的fragment
+
+			break;
+		case 3:
+			tv_shop_news_tab.setTextColor(getResources().getColor(
+					R.color.blue_text));
+			iv_shop_news_tab.setImageResource(R.drawable.icon_shop_news);
+			transaction.replace(R.id.frame_my_shops, fragment3);
+			break;
+		}
+		transaction.commitAllowingStateLoss();
+	}
+}

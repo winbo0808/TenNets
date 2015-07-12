@@ -1,0 +1,12 @@
+package com.hh.tennets.http;
+
+import android.content.Context;
+
+import com.ab.http.AbHttpUtil;
+
+public class DmHttpHelper {
+    private static final String TAG = "DmHttpHelper";
+    public void postRequest(Context context){
+//        AbHttpUtil.getInstance(context).post(url, params, responseListener);
+    }
+}

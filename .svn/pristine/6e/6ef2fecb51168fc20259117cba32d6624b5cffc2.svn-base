@@ -1,0 +1,82 @@
+package com.hh.tennets.activity;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Fragment;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+
+import com.ab.view.ioc.AbIocView;
+import com.ab.view.sliding.AbBottomTabView;
+import com.hh.tennets.BaseActivity;
+import com.hh.tennets.R;
+import com.hh.tennets.fragment.ChooseBuyFragment;
+import com.hh.tennets.fragment.HomePageFragment;
+import com.hh.tennets.fragment.PersonCenterFragment;
+import com.hh.tennets.fragment.ShoppingCartFragment;
+
+public class MainActivity extends BaseActivity {
+    @AbIocView(id = R.id.mBottomTabView)
+    private AbBottomTabView mBottomTabView;
+    private List<Drawable> tabDrawables = null;
+
+    @Override
+    public int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    public void initHolder() {
+        setSubPageTitle("奶酪时光", true);
+        mBottomTabView.getViewPager().setOffscreenPageLimit(5);
+        initFragments();
+    }
+
+    @Override
+    public void initLayoutParams() {}
+
+    @Override
+    public void registerClickLister() {}
+
+    @Override
+    public void initData() {}
+
+    private void initFragments() {
+        HomePageFragment homePageFragment = new HomePageFragment();
+        ChooseBuyFragment chooseBuyFragment = new ChooseBuyFragment();
+        ShoppingCartFragment shoppingCartFragment = new ShoppingCartFragment();
+        PersonCenterFragment personCenterFragment = new PersonCenterFragment();
+
+        List<Fragment> mFragments = new ArrayList<Fragment>();
+        mFragments.add(homePageFragment);
+        mFragments.add(chooseBuyFragment);
+        mFragments.add(shoppingCartFragment);
+        mFragments.add(personCenterFragment);
+
+        List<String> tabTexts = new ArrayList<String>();
+        tabTexts.add("首页");
+        tabTexts.add("选购");
+        tabTexts.add("购物车");
+        tabTexts.add("个人信息");
+        // 设置样式
+        mBottomTabView.setTabTextColor(Color.BLACK);
+        mBottomTabView.setTabSelectColor(Color.BLUE);
+        // mBottomTabView.setTabBackgroundResource(R.drawable.tab_bg2);
+        // mBottomTabView.setTabLayoutBackgroundResource(R.drawable.tablayout_bg2);
+        // 注意图片的顺序
+        tabDrawables = new ArrayList<Drawable>();
+        tabDrawables.add(this.getResources().getDrawable(R.drawable.btn_homepage_fragment));
+        tabDrawables.add(this.getResources().getDrawable(R.drawable.btn_person_center_fragment));// 第二个是选中之后的效果
+        tabDrawables.add(this.getResources().getDrawable(R.drawable.btn_homepage_fragment));
+        tabDrawables.add(this.getResources().getDrawable(R.drawable.btn_homepage_fragment));
+        tabDrawables.add(this.getResources().getDrawable(R.drawable.btn_person_center_fragment));
+        tabDrawables.add(this.getResources().getDrawable(R.drawable.btn_person_center_fragment));
+        tabDrawables.add(this.getResources().getDrawable(R.drawable.btn_person_center_fragment));
+        tabDrawables.add(this.getResources().getDrawable(R.drawable.btn_person_center_fragment));
+        mBottomTabView.setTabCompoundDrawablesBounds(0, 0, 40, 40);
+
+        mBottomTabView.addItemViews(tabTexts, mFragments, tabDrawables);
+        mBottomTabView.setTabPadding(10, 10, 10, 10);
+    }
+}

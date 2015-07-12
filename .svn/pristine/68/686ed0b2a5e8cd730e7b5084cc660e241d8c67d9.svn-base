@@ -1,0 +1,55 @@
+package com.hh.tennets.activity.shoppingcart;
+
+import android.content.Intent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+
+import com.ab.view.ioc.AbIocView;
+import com.hh.tennets.BaseActivity;
+import com.hh.tennets.R;
+
+/**
+ * 订单状态
+ */
+public class SubmitOrderStateActivity extends BaseActivity implements OnClickListener {
+    private static final String TAG = "SubmitOrderStateActivity";
+    @AbIocView(id = R.id.complaint_phone_btn)
+    private Button complaint_phone_btn;
+    @AbIocView(id = R.id.complaint_leavemessage_btn)
+    private Button complaint_leavemessage_btn;
+
+    @Override
+    public int getLayoutId() {
+        return R.layout.activity_submit_order_state;
+    }
+
+    @Override
+    public void initHolder() {}
+
+    @Override
+    public void initLayoutParams() {}
+
+    @Override
+    public void registerClickLister() {
+        complaint_leavemessage_btn.setOnClickListener(this);
+    }
+
+    @Override
+    public void initData() {}
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.complaint_leavemessage_btn:
+                Intent intent =
+                        new Intent(SubmitOrderStateActivity.this,
+                                LeaveMessageComplaintActivity.class);
+                startActivity(intent);
+                break;
+
+            default:
+                break;
+        }
+    }
+}

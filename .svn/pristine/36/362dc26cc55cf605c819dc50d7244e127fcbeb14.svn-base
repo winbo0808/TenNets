@@ -1,0 +1,28 @@
+package com.hh.tennets.activity.shoppingcart;
+
+import com.hh.tennets.BaseActivity;
+import com.hh.tennets.R;
+
+/**
+ * 取消订单成功
+ */
+public class CancelOrderSuccessActivity extends BaseActivity {
+    private static final String TAG = "CancelOrderSuccessActivity";
+
+    @Override
+    public int getLayoutId() {
+        return R.layout.activity_cancel_order_success;
+    }
+
+    @Override
+    public void initHolder() {}
+
+    @Override
+    public void initLayoutParams() {}
+
+    @Override
+    public void registerClickLister() {}
+
+    @Override
+    public void initData() {}
+}
